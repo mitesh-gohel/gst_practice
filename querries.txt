@@ -1,0 +1,79 @@
+--> What is difference between g_error() and g_printerr() ?
+--> Whar is difference between g_print() and printf() ?
+--> What is static pad ?
+	My understanding :
+		There are 3 types of pad availability : Always, Sometimes, On request. 
+		Always --> pad is always available
+		Sometimes --> pad will be created run time (dynamically) based on media streams. Ex. source pads of demuxer
+		On request --> pad will be created based on request only. EX. source pad of tee,  sink pads of muxer
+--> What is "ANY" and "empty" capabilities ?
+	Ans :
+		"ANY" --> The input Pad Caps of filesink are ANY, meaning that it can accept any kind of media.
+--> How to debug negotiation error ?
+--> What is difference between finding meda data through action signal and through GstDiscovrer
+	Ans :
+		in action signal --> need to play media
+		in GstDiscoverer --> Without playing media, we can find meta data
+		GstDiscoverer is plag-in based utility
+--> What is difference between signal and action signal ?
+--> What is difference between action siganl and GstQuery mechanisum of data collection ?
+--> Explain Gstreamer thread.
+
+--> Difference between codec and encoder.
+--> What is container format ?
+--> Explain below :
+uration: 0:00:52.250000000
+Tags:
+  container format: Matroska
+  language code: en
+  title: Audio
+  application name: ffmpeg2theora-0.24
+  encoder: Xiph.Org libVorbis I 20090709
+  encoder version: 0
+  audio codec: Vorbis
+  nominal bitrate: 80000
+  bitrate: 80000
+  video codec: VP8 video
+Seekable: yes
+
+Stream information:
+  container: WebM
+    audio: Vorbis
+      Tags:
+        container format: Matroska
+        language code: en
+        title: Audio
+        application name: ffmpeg2theora-0.24
+        encoder: Xiph.Org libVorbis I 20090709
+        encoder version: 0
+        audio codec: Vorbis
+        nominal bitrate: 80000
+        bitrate: 80000
+    video: VP8
+      Tags:
+        video codec: VP8 video
+        container format: Matroska
+
+
+--> What is metroska container ?
+--> What is plugin-good, plugin-bad etc...
+--> What is %u ?
+SRC template: 'video_%u'
+--> What is meaning of video/x-raw ?
+--> What is difference between decorder and converter ?
+	My understanding :
+		Decoder convert media from compressed format to raw format.
+		Converter convert raw media from one raw format to another raw format.
+--> What is major difference between READY and PAUSED state of pipeline ?
+	Ans :
+		NULL : Deactivated, element occupies no resources
+		READY : Check and allocate resources
+		PAUSED : It processes media. It gets a buffer to each sink. But it doesn't render media.
+		PLAYING ; active dataflow. It is similar to PAUSED state, Only difference is PLAYING state plays media.
+--> What are YUV formats ans RGB formats ? Explain.
+--> Understand PCM in audio.
+--> What is RTP ?
+	Ans :
+		RTP is Real-time Transport Protocol. It is used for delivering audio and video over IP network.
+--> What is Event in gstreamer ?
+
