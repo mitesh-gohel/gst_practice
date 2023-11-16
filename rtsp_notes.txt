@@ -1,0 +1,15 @@
+Real Time Streaming Protocol (RTSP)
+
+--> RTSP is appication layer protocol.
+--> It uses RTP in conjunction with Real-time Control Protocol (RTCP) for streaming media.
+--> It uses TCP to maintain an end-to-end connection
+
+
+
+
+
+
+
+
+Real-time Transport Protocol (RTP)
+--> The default transport layer port number is 554 for both TCP and UDP 
